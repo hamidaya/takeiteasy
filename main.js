@@ -1,5 +1,5 @@
 // VOORRAAD ARRAY MET TV'S
-const inventory = [
+const inventorys = [
   {
     type: '43PUS6504/12',
     name: '4K TV',
@@ -161,3 +161,46 @@ const inventory = [
     sold: 8,
   },
 ];
+
+// Opdracht 1a:
+const outcome = inventorys.map((inventory) => {
+  return inventory.name
+});
+console.log(outcome)
+
+// Opdracht 1b
+const soldout = inventorys.filter ((inventory) => {
+  return inventory.originalStock === inventory.sold
+});
+console.log(soldout)
+
+//Opdracht 1c
+const AmbiLightTvs = inventorys.filter((inventory) => {
+  return inventory.options.ambiLight === true;
+})
+console.log(AmbiLightTvs)
+
+// Opdracht 1d (snap ik niet
+// function inventorys((a, b) => a - b);
+//
+// const inventorys = sortPrice()
+// console.log(.);
+
+// Graag uileg opdracht 1D, Dit pakt ie niet graag feedback:
+
+// Opdracht 1d:
+inventorys.sort((a, b) => {
+  return a - b;
+});
+console.log(inventorys);
+
+// Opdracht 2a:
+
+let count = 0;
+for(count i = 0; i < inventorys; ++i){
+  if(inventorys[i] == 2)
+    count++;
+}
+console.log()
+
+
