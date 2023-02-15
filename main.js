@@ -195,27 +195,22 @@ const itemsSold = inventorys.reduce((accumulator, currentTv) => {
 
 console.log(itemsSold);
 
-//Opdracht 2b:
+// Opdracht 2b: kleuren en styling sla ik over.
 
 const SoldTvs = document.getElementById("total-items-sold");
-console.log(SoldTvs);
+console.log(itemsSold);
 SoldTvs.textContent = itemsSold;
 
-//Opdracht 2c:
-// const Buyed = document.getElementById("total-items-buyed");
-// Buyed.textContent;
+// opdracht 2c
 
-const itemBuyed = inventorys.reduce((accumulator, currentTv) => {
-  return accumulator + currentTv.originalStock;
+const itemsBought = inventorys.reduce((accumulator, currentTv) => {
+  return accumulator + currentTv.sold + currentTv.originalStock;
 }, 0);
 
-Document.getElementById("total-items-buyed");
-itemBuyed;
+console.log(itemsBought);
 
+// Opdracht 2d: Zorg ervoor dat dit aantal in het blauw wordt weergegeven op de pagina.
 
-
-
-
-
-
-
+const bought = document.getElementById("total-items-bought");
+console.log(itemsBought);
+bought.textContent = itemsBought;
