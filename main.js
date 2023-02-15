@@ -180,27 +180,42 @@ const AmbiLightTvs = inventorys.filter((inventory) => {
 })
 console.log(AmbiLightTvs)
 
-// Opdracht 1d (snap ik niet
-// function inventorys((a, b) => a - b);
-//
-// const inventorys = sortPrice()
-// console.log(.);
-
-// Graag uileg opdracht 1D, Dit pakt ie niet graag feedback:
-
-// Opdracht 1d:
+//Opdracht 1d
 inventorys.sort((a, b) => {
-  return a - b;
+  return a.price - b.price;
 });
 console.log(inventorys);
 
+
 // Opdracht 2a:
 
-let count = 0;
-for(count i = 0; i < inventorys; ++i){
-  if(inventorys[i] == 2)
-    count++;
-}
-console.log()
+const itemsSold = inventorys.reduce((accumulator, currentTv) => {
+  return accumulator + currentTv.sold;
+}, 0);
+
+console.log(itemsSold);
+
+//Opdracht 2b:
+
+const SoldTvs = document.getElementById("total-items-sold");
+console.log(SoldTvs);
+SoldTvs.textContent = itemsSold;
+
+//Opdracht 2c:
+// const Buyed = document.getElementById("total-items-buyed");
+// Buyed.textContent;
+
+const itemBuyed = inventorys.reduce((accumulator, currentTv) => {
+  return accumulator + currentTv.originalStock;
+}, 0);
+
+Document.getElementById("total-items-buyed");
+itemBuyed;
+
+
+
+
+
+
 
 
