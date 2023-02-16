@@ -196,7 +196,7 @@ const itemsSold = inventorys.reduce((accumulator, currentTv) => {
 console.log(itemsSold);
 
 // Opdracht 2b: kleuren en styling sla ik over.
-
+//
 const SoldTvs = document.getElementById("total-items-sold");
 console.log(itemsSold);
 SoldTvs.textContent = itemsSold;
@@ -210,7 +210,19 @@ const itemsBought = inventorys.reduce((accumulator, currentTv) => {
 console.log(itemsBought);
 
 // Opdracht 2d: Zorg ervoor dat dit aantal in het blauw wordt weergegeven op de pagina.
-
+//
 const bought = document.getElementById("total-items-bought");
 console.log(itemsBought);
 bought.textContent = itemsBought;
+
+// Opdracht 2E
+//Dit is toch instock vooraad? Ik sla deze vraag over want dit is al beantwoord.
+
+// Opdracht 3a
+
+function showTvName(television) {
+  return television.brand + " " + television.type + " - " + television.name
+}
+
+const brands = document.getElementById("total-items-brands");
+brands.textContent = showTvName();
